@@ -39,7 +39,7 @@ Probabilities_Table <- matrix(ncol = 2, nrow = successes_up_to)
 
 for (i in 1:successes_up_to) {
   count = i
-  sum   = 0
+  sum = 0
   for (j in 1:t) {
     sum = sum + consecutiveSuccess_with_Lives_Parameter(p, count, n, lives)
   }
@@ -47,7 +47,7 @@ for (i in 1:successes_up_to) {
   Probabilities_Table[i,2] <- (sum*1.0)/t
 }
 
-Probabilities_Table        <- data.frame(Probabilities_Table)
+Probabilities_Table <- data.frame(Probabilities_Table)
 names(Probabilities_Table) <- c("Number of Consecutive Successes with Lives", "Probability")
 
 
